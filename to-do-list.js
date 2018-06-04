@@ -1,5 +1,5 @@
 let taskArray = [];
-const $input = document.getElementById('input');
+const $input = document.querySelector('input');
 const $button = document.querySelector('.add-list-item');
 const $taskList = document.querySelector('.task-list');
 
@@ -9,7 +9,7 @@ $button.addEventListener('click', whenButtonClick);
 function whenButtonClick() {
 
 	taskArray.push($input.value);
-	console.log('from inside when button click', taskArray);
+	console.log(taskArray);
 
 	let $listItem = document.createElement("li");
 	let $listText = document.createElement("p");
@@ -26,7 +26,20 @@ function whenButtonClick() {
 }
 
 function deleteItem(event) {
-	console.log(event.target);
+
+  console.log(event.path[1]);
+  // finding the listItem HTML <li> tag.
+  const $selectedTaskToDeleteHtml = event.path[1];
+  // accessing the text of the listItem. firstElementChild = <p></p>
+  const $selectedTaskToDelete = event.path[1].firstElementChild.innerHTML;
+  // removing the listItem from the DOM. parentNode = <li></li>
+  $selectedTaskToDeleteHtml.parentNode.removeChild($selectedTaskToDeleteHtml);
+  // finding the index of $selectedTaskToDelete in taskArray
+  let a = taskArray.indexOf($selectedTaskToDelete);
+  // splicing this string out of taskArray by it's index. Second parameter states how many to remove.
+  taskArray.splice(a, 1);
+  console.log(taskArray);
+
 }
 // let input = whenButtonClick();
 // console.log(input);
