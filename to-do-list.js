@@ -41,6 +41,9 @@ function deleteItem(event) {
   console.log(taskArray);
 
 }
+
+//test
+
 // let input = whenButtonClick();
 // console.log(input);
 
