@@ -14,20 +14,23 @@ function whenButtonClick() {
 	let $listItem = document.createElement("li");
 	let $listText = document.createElement("p");
 	let $deleteButton = document.createElement("button");
+	let $editButton = document.createElement("button");
 
 	$listText.innerText = $input.value;
 	$deleteButton.innerText = "Delete";
+	$editButton.innerText = "Edit";
 	$taskList.append($listItem);
 	$listItem.append($listText);
 	$listItem.append($deleteButton);
+	$listItem.append($editButton);
 
 	$deleteButton.addEventListener('click', deleteItem);
+	$editButton.addEventListener('click', editItem);
 
 }
 
-function deleteItem(event) {
 
-  console.log(event.path[1]);
+function deleteItem(event) {
   // finding the listItem HTML <li> tag.
   const $selectedTaskToDeleteHtml = event.path[1];
   // accessing the text of the listItem. firstElementChild = <p></p>
@@ -35,20 +38,12 @@ function deleteItem(event) {
   // removing the listItem from the DOM. parentNode = <li></li>
   $selectedTaskToDeleteHtml.parentNode.removeChild($selectedTaskToDeleteHtml);
   // finding the index of $selectedTaskToDelete in taskArray
-  let a = taskArray.indexOf($selectedTaskToDelete);
+  let index = taskArray.indexOf($selectedTaskToDelete);
   // splicing this string out of taskArray by it's index. Second parameter states how many to remove.
-  taskArray.splice(a, 1);
+  taskArray.splice(index, 1);
   console.log(taskArray);
-
 }
 
-//test
-
-// let input = whenButtonClick();
-// console.log(input);
-
-// document.getElementById("myList").innerHTML = whenButtonClick();
-
-//add event listener (pass the click and callback function)
-
-//event.target browser gives a way to interact with DOM and point to specific thing
+function editItem(event) {
+	console.log(event);
+}
