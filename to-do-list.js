@@ -45,5 +45,22 @@ function deleteItem(event) {
 }
 
 function editItem(event) {
-	console.log(event);
+	const $selectedTaskToEditHTML = event.path[1];
+	const $selectedTaskToEdit = event.path[1].firstElementChild.innerHTML;
+	console.log($selectedTaskToEdit);
+
+	$selectedTaskToEditHTML.parentNode.removeChild($selectedTaskToEditHTML);
+
+	let $editListItem = document.createElement("li");
+	let $editListInput = document.createElement("INPUT");
+	// let $editListText = document.createElement("p");
+
+	$taskList.append($editListItem);
+	$editListItem.append($editListInput);
+	
+	// $editListItem.append($editListText);
+
+
+
+
 }
