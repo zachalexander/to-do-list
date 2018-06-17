@@ -1,13 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 body {
-  font-family: "Calibri", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #404040;
+  background-color: #fff;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+ul.task-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+button {
+  border: 1px solid #ccc;
+  font-family: "Roboto", sans-serif;
+  padding: 4px;
+}
+
+button.task-list__delete-button {
+  background-color: #e75555;
+  color: #fff;
+}
+
+button.task-list__edit-button {
+  background-color: #6a6adb;
+  color: #fff;
+}
+
+.wrapper {
   background-color: #efefef;
+  padding: 80px;
+}
+
+.button-wrapper {
+  margin-top: 10px;
+}
+
+.list-title {
+  text-align: center;
+}
+
+.task-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-list__item-name {
+  font-size: 0.75em;
 }
 
 .hide {
   display: none;
-}
-
-ul.task-list {
-  list-style: none;
 }
 /*# sourceMappingURL=to-do-list.css.map */
