@@ -15,7 +15,7 @@ function addItem() {
 	
 	// add classes
 	$listItem.classList.add("task-list__item");
-  $listText.classList.add("task-list__item-name");
+  	$listText.classList.add("task-list__item-name");
 	$deleteButton.classList.add("task-list__delete-button");
 	$editButton.classList.add("task-list__edit-button");
 	
@@ -42,8 +42,8 @@ function addItem() {
 
 function deleteItem(event) {
 	// UI
-  const $selectedTask = event.target;
-  const $listItem = $selectedTask.parentNode;
+	const $selectedTask = event.target;
+	const $listItem = $selectedTask.parentNode;
 	const taskToDelete = $listItem.querySelector('.task-list__item-name').innerText;
 	$selectedTask.parentNode.remove('task-list__item');
 	

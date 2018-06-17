@@ -1,5 +1,8 @@
+
+$font-stack: 'Calibri', sans-serif;
+
 body {
-  font-family: "Calibri", sans-serif;
+  font-family: $font-stack;
   background-color: #efefef;
 }
 
@@ -10,4 +13,3 @@ body {
 ul.task-list {
   list-style: none;
 }
-/*# sourceMappingURL=to-do-list.css.map */
