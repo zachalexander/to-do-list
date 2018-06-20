@@ -72,6 +72,7 @@ input {
   background-color: #efefef;
   padding: 80px;
   text-align: center;
+  border: 1px solid #ddd;
 }
 
 .to-do-list__item--title {

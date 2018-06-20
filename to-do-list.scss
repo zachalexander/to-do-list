@@ -6,13 +6,14 @@ $font-color: #404040;
 $font-size: 18px;
 $font-size__list-item: 0.75em;
 
-// BACKGROUND COLORS
+// COLORS
 $delete-button-background: #e75555;
 $edit-button-background: #6a6adb;
 $add-button-background: #3daa3d;
 $body-background: #fff;
 $title-background: #535050;
 $wrapper-background: #efefef;
+$wrapper-border: #ddd;
 
 // BODY AND INPUT STYLINGS
 body {
@@ -92,6 +93,7 @@ $default-list-style: none;
   background-color: $wrapper-background;
   padding: 80px;
   text-align: center;
+  border: 1px solid $wrapper-border;
 }
 
 .to-do-list__item--title {
