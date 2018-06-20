@@ -1,6 +1,6 @@
 let taskArray = [];
 const $input = document.querySelector('input');
-const $addButton = document.querySelector('.add-list-item');
+const $addButton = document.querySelector('.btn.btn--add-item');
 const $taskList = document.querySelector('.task-list');
 
 $addButton.addEventListener('click', addItem);
@@ -15,9 +15,9 @@ function addItem() {
 	
 	// add classes
 	$listItem.classList.add("task-list__item");
-  	$listText.classList.add("task-list__item-name");
-	$deleteButton.classList.add("task-list__delete-button");
-	$editButton.classList.add("task-list__edit-button");
+  	$listText.classList.add("task-list__item--name");
+	$deleteButton.classList.add("btn", "btn--delete-item");
+	$editButton.classList.add("btn", "btn--edit-item");
 	
 	// add innerText to elements
 	$listText.innerText = $input.value;
@@ -44,7 +44,7 @@ function deleteItem(event) {
 	// UI
 	const $selectedTask = event.target;
 	const $listItem = $selectedTask.parentNode;
-	const taskToDelete = $listItem.querySelector('.task-list__item-name').innerText;
+	const taskToDelete = $listItem.querySelector('.task-list__item--name').innerText;
 	$selectedTask.parentNode.remove('task-list__item');
 	
 	// STATE
@@ -67,12 +67,12 @@ function editItem(event) {
 	let $editListButton = document.createElement("button");
 
 	// add class names
-	$editListItem.classList.add("task-list__edit-item");
-	$editListInput.classList.add("task-list__edit-input");
-	$editListButton.classList.add("task-list__edit-button");
+	$editListItem.classList.add("task-list__edit--item");
+	$editListInput.classList.add("task-list__edit--input");
+	$editListButton.classList.add("btn", "btn--edit-item");
 	
 	// add innerText to elements
-	const $taskToEdit = $listItem.querySelector('.task-list__item-name');
+	const $taskToEdit = $listItem.querySelector('.task-list__item--name');
 	const task = $taskToEdit.innerText;
 	$editListInput.value = task;
 
@@ -98,5 +98,5 @@ function editItem(event) {
 	// appending elements to DOM
 	$taskList.append($editListItem);
 	$editListItem.append($editListInput);
-  $editListItem.append($editListButton);
+  	$editListItem.append($editListButton);
 }

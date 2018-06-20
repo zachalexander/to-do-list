@@ -1,8 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-// BODY STYLINGS
-$body-background: #fff;
 
 // FONT STYLINGS
 $font-stack: 'Roboto', sans-serif;
@@ -10,14 +6,15 @@ $font-color: #404040;
 $font-size: 18px;
 $font-size__list-item: 0.75em;
 
-// LIST STYLINGS
-$default-list-style: none;
-
-// BUTTON STYLINGS
-$button-border: 1px solid #ccc;
+// BACKGROUND COLORS
 $delete-button-background: #e75555;
 $edit-button-background: #6a6adb;
+$add-button-background: #3daa3d;
+$body-background: #fff;
+$title-background: #535050;
+$wrapper-background: #efefef;
 
+// BODY AND INPUT STYLINGS
 body {
   font-family: $font-stack;
   color: $font-color;
@@ -27,50 +24,84 @@ body {
   justify-content: center;
 }
 
-ul.task-list {
-  list-style-type: none;
-  padding-left: 0;
+input {
+  min-width: 300px;
+  min-height: 30px;
+  padding: 5px;
 }
 
-button {
-  border: $button-border;
+// BUTTON STYLINGS
+.btn {
   font-family: $font-stack;
   padding: 4px;
+  border-radius: 4px;
 }
 
-button.task-list__delete-button {
+.btn--delete-item {
   background-color: $delete-button-background;
   color: $body-background;
+  border: 1px solid $delete-button-background;
+  margin: 0px 2px 0px 20px;
 }
 
-button.task-list__edit-button {
+.btn--edit-item {
   background-color: $edit-button-background;
   color: $body-background;
+  border: 1px solid $edit-button-background;
 }
 
-.wrapper {
-  background-color: #efefef;
-  padding: 80px;
-}
-
-.button-wrapper {
+.btn--add-item {
+  background-color: $add-button-background;
+  color: $body-background;
+  border: 1px solid $add-button-background;
   margin-top: 10px;
 }
 
-.list-title {
-  text-align: center;
+// TASK LIST STYLINGS
+$default-list-style: none;
+
+.task-list {
+  list-style-type: $default-list-style;
+  padding-left: 0;
+  margin-top: 0;
 }
 
 .task-list__item {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: $body-background;
+  padding: 10px;
+  margin-bottom: 2px;
 }
 
-.task-list__item-name {
+.task-list__edit--item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $body-background;
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.task-list__item--name {
   font-size: $font-size__list-item;
 }
 
+.to-do-list__list--wrapper {
+  background-color: $wrapper-background;
+  padding: 80px;
+  text-align: center;
+}
+
+.to-do-list__item--title {
+  background: $title-background;
+  padding: 20px;
+  margin-bottom: 0;
+  color: $body-background;
+}
+
+// HIDE ELEMENTS
 .hide {
   display: none;
 }

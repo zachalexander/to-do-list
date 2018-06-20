@@ -8,48 +8,77 @@ body {
   justify-content: center;
 }
 
-ul.task-list {
-  list-style-type: none;
-  padding-left: 0;
+input {
+  min-width: 300px;
+  min-height: 30px;
+  padding: 5px;
 }
 
-button {
-  border: 1px solid #ccc;
+.btn {
   font-family: "Roboto", sans-serif;
   padding: 4px;
+  border-radius: 4px;
 }
 
-button.task-list__delete-button {
+.btn--delete-item {
   background-color: #e75555;
   color: #fff;
+  border: 1px solid #e75555;
+  margin: 0px 2px 0px 20px;
 }
 
-button.task-list__edit-button {
+.btn--edit-item {
   background-color: #6a6adb;
   color: #fff;
+  border: 1px solid #6a6adb;
 }
 
-.wrapper {
-  background-color: #efefef;
-  padding: 80px;
-}
-
-.button-wrapper {
+.btn--add-item {
+  background-color: #3daa3d;
+  color: #fff;
+  border: 1px solid #3daa3d;
   margin-top: 10px;
 }
 
-.list-title {
-  text-align: center;
+.task-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
 }
 
 .task-list__item {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 2px;
 }
 
-.task-list__item-name {
+.task-list__edit--item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.task-list__item--name {
   font-size: 0.75em;
+}
+
+.to-do-list__list--wrapper {
+  background-color: #efefef;
+  padding: 80px;
+  text-align: center;
+}
+
+.to-do-list__item--title {
+  background: #535050;
+  padding: 20px;
+  margin-bottom: 0;
+  color: #fff;
 }
 
 .hide {
