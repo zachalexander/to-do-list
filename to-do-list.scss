@@ -1,16 +1,13 @@
 @import 'normalize';
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Roboto|Dosis|Gloria+Hallelujah|Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Gloria+Hallelujah|Indie+Flower|Cabin+Sketch');
 
 // ============
 // FONT STYLINGS
 // ============
 
-$font-stack: 'Gloria Hallelujah', 'Roboto', sans-serif;
+$font-stack: 'Cabin Sketch', 'Roboto', sans-serif;
 $font-color: #404040;
-$font-size: 18px;
-$font-size__list-item: 0.75em;
-
+$font-size: 20px;
 
 // ============
 // COLORS
@@ -39,6 +36,7 @@ $add-button-background: #F4F1BB;
 
 body {
   font-family: $font-stack;
+  font-size: $font-size;
   color: $text;
 	background: $background;
 	height: 100vh;
@@ -83,6 +81,7 @@ input {
 		padding: 20px;
     margin: 0;
     text-align: center;
+    font-size: 2em;
 	}
 }
 
@@ -109,6 +108,10 @@ input {
     justify-self: center;
     align-self: center;
     padding-left: 30px; 
+  }
+
+    &__item-button-wrapper {
+    display: flex;
   }
 
   &__item-button-text {
@@ -142,6 +145,7 @@ input {
   &__delete-item {
     background-color: $primary;
     border: 1px solid $primary;
+    order: 1;
   }
 
   &__edit-item {

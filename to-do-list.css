@@ -5,8 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://fonts.googleapis.com/css?family=Roboto|Dosis|Gloria+Hallelujah|Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Gloria+Hallelujah|Indie+Flower|Cabin+Sketch");
 html {
   line-height: 1.15;
   /* 1 */
@@ -339,7 +338,8 @@ template {
 }
 
 body {
-  font-family: "Gloria Hallelujah", "Roboto", sans-serif;
+  font-family: "Cabin Sketch", "Roboto", sans-serif;
+  font-size: 20px;
   color: #4F6367;
   background: #E6EBE0;
   height: 100vh;
@@ -374,6 +374,7 @@ input {
   padding: 20px;
   margin: 0;
   text-align: center;
+  font-size: 2em;
 }
 
 .task-list {
@@ -400,6 +401,10 @@ input {
   justify-self: center;
   align-self: center;
   padding-left: 30px;
+}
+
+.task-list__item-button-wrapper {
+  display: flex;
 }
 
 .task-list__item-button-text {
@@ -429,6 +434,7 @@ input {
 .btn__delete-item {
   background-color: #ED6A5A;
   border: 1px solid #ED6A5A;
+  order: 1;
 }
 
 .btn__edit-item {
