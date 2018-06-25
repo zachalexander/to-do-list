@@ -6,7 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://fonts.googleapis.com/css?family=Dosis|Gloria+Hallelujah|Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Roboto|Dosis|Gloria+Hallelujah|Indie+Flower");
 html {
   line-height: 1.15;
   /* 1 */
@@ -339,7 +339,7 @@ template {
 }
 
 body {
-  font-family: "Gloria Hallelujah", sans-serif;
+  font-family: "Gloria Hallelujah", "Roboto", sans-serif;
   color: #4F6367;
   background: #E6EBE0;
   height: 100vh;
@@ -399,7 +399,7 @@ input {
 .task-list__item-text-wrapper {
   justify-self: center;
   align-self: center;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 
 .task-list__item-button-text {

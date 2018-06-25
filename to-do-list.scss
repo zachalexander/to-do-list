@@ -1,12 +1,12 @@
 @import 'normalize';
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Dosis|Gloria+Hallelujah|Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Dosis|Gloria+Hallelujah|Indie+Flower');
 
 // ============
 // FONT STYLINGS
 // ============
 
-$font-stack: 'Gloria Hallelujah', sans-serif;
+$font-stack: 'Gloria Hallelujah', 'Roboto', sans-serif;
 $font-color: #404040;
 $font-size: 18px;
 $font-size__list-item: 0.75em;
@@ -108,7 +108,7 @@ input {
   &__item-text-wrapper {
     justify-self: center;
     align-self: center;
-    padding-left: 20px; 
+    padding-left: 30px; 
   }
 
   &__item-button-text {

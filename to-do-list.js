@@ -1,4 +1,4 @@
-let taskArray = [];
+let taskArray = ['Go to the store.', 'Feed Ruggles his food.', 'Visit the grandparents.', 'Make a fresh brew of coffee.', 'Play soccer with friends.'];
 const $input = document.querySelector('input');
 const $addButton = document.querySelector('.btn__add-item');
 const $taskList = document.querySelector('.task-list');
