@@ -1,6 +1,6 @@
-let taskArray = ['go to store', 'buy groceries', 'exercise', 'call mom'];
+let taskArray = [];
 const $input = document.querySelector('input');
-const $addButton = document.querySelector('.input__add-btn');
+const $addButton = document.querySelector('.btn__add-item');
 const $taskList = document.querySelector('.task-list');
 
 $addButton.addEventListener('click', addItem);
@@ -15,16 +15,20 @@ function createElement(taskName) {
 	// create elements
 	let $listItem = document.createElement("li");
 	let $listWrapper = document.createElement("div");
+	let $textWrapper = document.createElement("div");
+	let $buttonWrapper = document.createElement("div");
 	let $listText = document.createElement("p");
 	let $deleteButton = document.createElement("button");
 	let $editButton = document.createElement("button");
 
 	// add classes
 	$listItem.classList.add("task-list__item");
-	$listWrapper.classList.add("task-list__item-wrapper")
+	$listWrapper.classList.add("task-list__item-wrapper");
+	$textWrapper.classList.add("task-list__item-text-wrapper");
 	$listText.classList.add("task-list__item-name");
-	$deleteButton.classList.add("btn", "btn--delete-item");
-	$editButton.classList.add("btn", "btn--edit-item");
+	$buttonWrapper.classList.add("task-list__item-button-wrapper");
+	$deleteButton.classList.add("btn__delete-item");
+	$editButton.classList.add("btn__edit-item");
 
 	// add innerText to elements
 	$listText.innerText = taskName;
@@ -37,10 +41,12 @@ function createElement(taskName) {
 
 	// appending elements to DOM
 	$taskList.append($listItem);
-	$listItem.append($listWrapper)
-	$listWrapper.append($listText);
-	$listWrapper.append($deleteButton);
-	$listWrapper.append($editButton);
+	$listItem.append($listWrapper);
+	$listWrapper.append($textWrapper);
+	$textWrapper.append($listText);
+	$listWrapper.append($buttonWrapper);
+	$buttonWrapper.append($deleteButton);
+	$buttonWrapper.append($editButton);
 }
 
 
@@ -78,9 +84,9 @@ function editItem(event) {
 	let $editListButton = document.createElement("button");
 
 	// add class names
-	$editListItem.classList.add("task-list__edit--item");
-	$editListInput.classList.add("task-list__edit--input");
-	$editListButton.classList.add("btn", "btn--edit-item");
+	$editListItem.classList.add("task-list__edit-item");
+	$editListInput.classList.add("task-list__edit-input");
+	$editListButton.classList.add("btn__edit-item");
 	
 	// add innerText to elements
 	const $taskToEdit = $listWrapper.querySelector('.task-list__item-name');
@@ -107,5 +113,5 @@ function editItem(event) {
 	// appending elements to DOM
 	$listItem.append($editListItem);
 	$editListItem.append($editListInput);
-  $editListItem.append($editListButton);
+  	$editListItem.append($editListButton);
 }

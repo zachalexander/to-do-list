@@ -6,11 +6,13 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Dosis|Gloria+Hallelujah|Indie+Flower");
 html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* Sections
    ========================================================================== */
@@ -18,7 +20,8 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -26,7 +29,8 @@ body {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -40,7 +44,8 @@ hr {
   height: 0;
   /* 1 */
   overflow: visible;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -50,7 +55,8 @@ pre {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* Text-level semantics
    ========================================================================== */
@@ -58,7 +64,8 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 a {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -70,14 +77,16 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   text-decoration: underline dotted;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -89,13 +98,15 @@ samp {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Add the correct font size in all browsers.
  */
 small {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -106,13 +117,16 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
 /* Embedded content
    ========================================================================== */
@@ -120,7 +134,8 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 img {
-  border-style: none; }
+  border-style: none;
+}
 
 /* Forms
    ========================================================================== */
@@ -140,7 +155,8 @@ textarea {
   line-height: 1.15;
   /* 1 */
   margin: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Show the overflow in IE.
@@ -149,7 +165,8 @@ textarea {
 button,
 input {
   /* 1 */
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -158,7 +175,8 @@ input {
 button,
 select {
   /* 1 */
-  text-transform: none; }
+  text-transform: none;
+}
 
 /**
  * Correct the inability to style clickable types in iOS and Safari.
@@ -167,7 +185,8 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; }
+  -webkit-appearance: button;
+}
 
 /**
  * Remove the inner border and padding in Firefox.
@@ -177,7 +196,8 @@ button::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Restore the focus styles unset by the previous rule.
@@ -186,13 +206,15 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
+  outline: 1px dotted ButtonText;
+}
 
 /**
  * Correct the padding in Firefox.
  */
 fieldset {
-  padding: 0.35em 0.75em 0.625em; }
+  padding: 0.35em 0.75em 0.625em;
+}
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -212,19 +234,22 @@ legend {
   padding: 0;
   /* 3 */
   white-space: normal;
-  /* 1 */ }
+  /* 1 */
+}
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
 textarea {
-  overflow: auto; }
+  overflow: auto;
+}
 
 /**
  * 1. Add the correct box sizing in IE 10.
@@ -235,14 +260,16 @@ textarea {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+  height: auto;
+}
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
@@ -252,13 +279,15 @@ textarea {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -268,7 +297,8 @@ textarea {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* Interactive
    ========================================================================== */
@@ -276,13 +306,15 @@ textarea {
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
 details {
-  display: block; }
+  display: block;
+}
 
 /*
  * Add the correct display in all browsers.
  */
 summary {
-  display: list-item; }
+  display: list-item;
+}
 
 /* Misc
    ========================================================================== */
@@ -290,106 +322,130 @@ summary {
  * Add the correct display in IE 10+.
  */
 template {
-  display: none; }
+  display: none;
+}
 
 /**
  * Add the correct display in IE 10.
  */
 [hidden] {
-  display: none; }
+  display: none;
+}
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Gloria Hallelujah", sans-serif;
   color: #4F6367;
-  background: #EEF5DB;
+  background: #E6EBE0;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
+
+button {
+  padding: 20px 30px 20px 30px;
+  border-radius: 4px;
+  margin: 5px 3px 5px 0px;
+  color: #fff;
+}
+
+input {
+  padding: 20px 30px 20px 30px;
+  border: #fff;
+  border-radius: 4px;
+}
 
 .to-do-list {
-  background: #B8D8D8;
+  background: #9BC1BC;
   height: 70vh;
   width: 70vw;
   max-width: 600px;
-  color: #fff; }
-  .to-do-list__title {
-    background: #7A9E9F;
-    padding: 20px;
-    margin-bottom: 0; }
+  color: #fff;
+}
+
+.to-do-list__title {
+  background: #335A5D;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+}
 
 .task-list {
   padding-left: 0;
-  margin-top: 0; }
-  .task-list__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #7A9E9F;
-    padding: 10px;
-    margin-bottom: 2px;
-    min-height: 100px; }
-  .task-list__edit--item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    padding: 10px;
-    margin-bottom: 2px; }
-  .task-list__item--name {
-    font-size: 0.75em; }
-
-.btn {
-  font-family: "Roboto", sans-serif;
-  padding: 4px;
-  border-radius: 4px; }
-
-.btn--delete-item {
-  background-color: #e75555;
-  color: #fff;
-  border: 1px solid #e75555;
-  margin: 0px 2px 0px 20px; }
-
-.btn--edit-item {
-  background-color: #6a6adb;
-  color: #fff;
-  border: 1px solid #6a6adb; }
-
-.btn--add-item {
-  background-color: #3daa3d;
-  color: #fff;
-  border: 1px solid #3daa3d;
-  margin-top: 10px; }
-
-.task-list {
-  padding-left: 0;
-  margin-top: 0; }
+  margin-top: 0;
+  list-style-type: none;
+}
 
 .task-list__item {
-  display: flex;
   align-items: center;
   justify-content: center;
-  background: #7A9E9F;
+  background: #335A5D;
   padding: 10px;
-  margin-bottom: 2px; }
+  margin-bottom: 2px;
+  min-height: 100px;
+}
 
-.task-list__edit--item {
+.task-list__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-list__item-text-wrapper {
+  justify-self: center;
+  align-self: center;
+  padding-left: 20px;
+}
+
+.task-list__item-button-text {
+  justify-content: center;
+}
+
+.task-list__edit-item {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fff;
   padding: 10px;
-  margin-bottom: 2px; }
+  margin-bottom: 2px;
+}
 
-.task-list__item--name {
-  font-size: 0.75em; }
+.task-list__edit-input {
+  border: 1px solid #D1E2E0;
+}
+
+.input {
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
+  margin: 5px 3px 5px 0px;
+  text-align: center;
+}
+
+.btn__delete-item {
+  background-color: #ED6A5A;
+  border: 1px solid #ED6A5A;
+}
+
+.btn__edit-item {
+  background-color: #D1E2E0;
+  border: 1px solid #D1E2E0;
+  color: #4F6367;
+  margin-left: 3px;
+}
+
+.btn__add-item {
+  background-color: #F4F1BB;
+  color: #4F6367;
+  border: #F4F1BB;
+  margin-top: 10px;
+}
 
 .hide {
-  display: none; }
-
+  display: none;
+}
 /*# sourceMappingURL=to-do-list.css.map */

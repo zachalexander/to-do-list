@@ -1,11 +1,12 @@
 @import 'normalize';
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Gloria+Hallelujah|Indie+Flower');
 
 // ============
 // FONT STYLINGS
 // ============
 
-$font-stack: 'Roboto', sans-serif;
+$font-stack: 'Gloria Hallelujah', sans-serif;
 $font-color: #404040;
 $font-size: 18px;
 $font-size__list-item: 0.75em;
@@ -15,20 +16,15 @@ $font-size__list-item: 0.75em;
 // COLORS
 // ============
 
-$delete-button-background: #e75555;
-$edit-button-background: #6a6adb;
-$add-button-background: #3daa3d;
-$body-background: #fff;
-$title-background: #535050;
-$wrapper-background: #efefef;
-$wrapper-border: #ddd;
-
-$background: #EEF5DB;
-$primary: #FE5F55;
-$light-secondary: #B8D8D8;
-$dark-secondary: #7A9E9F;
+$background: #E6EBE0;
+$primary: #ED6A5A;
+$light-secondary: #9BC1BC;
+$dark-secondary: #335A5D;
 $text: #4F6367;
 $light-text: #fff;
+$edit-button-background: #D1E2E0;
+$add-button-background: #F4F1BB;
+
 
 *,
 *::before,
@@ -49,6 +45,19 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+button {
+  padding: 20px 30px 20px 30px;
+  border-radius: 4px;
+  margin: 5px 3px 5px 0px;
+  color: $light-text;
+}
+
+input {
+  padding: 20px 30px 20px 30px;
+  border: $light-text;
+  border-radius: 4px;
 }
 
 // input {
@@ -72,111 +81,82 @@ body {
 	&__title {
 		background: $dark-secondary;
 		padding: 20px;
-		margin-bottom: 0;
+    margin: 0;
+    text-align: center;
 	}
 }
-
-
 
 .task-list {
   padding-left: 0;
   margin-top: 0;
+  list-style-type: none;
 
 	&__item {
-		display: flex;
-		align-items: center;
+    align-items: center;
 		justify-content: center;
 		background: $dark-secondary;
 		padding: 10px;
 		margin-bottom: 2px;
 		min-height: 100px;
-	}
+  }
 
-	&__edit--item {
+  &__item-wrapper {
+		display: flex;
+    justify-content: space-between;
+  }
+
+  &__item-text-wrapper {
+    justify-self: center;
+    align-self: center;
+    padding-left: 20px; 
+  }
+
+  &__item-button-text {
+    justify-content: center;
+  }
+
+	&__edit-item {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: $body-background;
+		background: $light-text;
 		padding: 10px;
 		margin-bottom: 2px;
-	}
-
-	&__item--name {
-		font-size: $font-size__list-item;
-	}
+  }
+  
+  &__edit-input {
+    border: 1px solid #D1E2E0;
+  }
 }
 
 
-
 .input {
-
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
+  margin: 5px 3px 5px 0px;
+  text-align: center;
 }
 
 // BUTTON STYLINGS
 .btn {
-  font-family: $font-stack;
-  padding: 4px;
-  border-radius: 4px;
-}
+  &__delete-item {
+    background-color: $primary;
+    border: 1px solid $primary;
+  }
 
-.btn--delete-item {
-  background-color: $delete-button-background;
-  color: $body-background;
-  border: 1px solid $delete-button-background;
-  margin: 0px 2px 0px 20px;
-}
+  &__edit-item {
+    background-color: $edit-button-background;
+    border: 1px solid $edit-button-background;
+    color: $text;
+    margin-left: 3px;
+  }
 
-.btn--edit-item {
-  background-color: $edit-button-background;
-  color: $body-background;
-  border: 1px solid $edit-button-background;
-}
-
-.btn--add-item {
-  background-color: $add-button-background;
-  color: $body-background;
-  border: 1px solid $add-button-background;
-  margin-top: 10px;
-}
-
-// TASK LIST STYLINGS
-
-.task-list {
-  padding-left: 0;
-  margin-top: 0;
-}
-
-.task-list__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $dark-secondary;
-  padding: 10px;
-  margin-bottom: 2px;
-}
-
-.task-list__edit--item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $body-background;
-  padding: 10px;
-  margin-bottom: 2px;
-}
-
-.task-list__item--name {
-  font-size: $font-size__list-item;
-}
-
-// .to-do-list__list--wrapper {
-//   background-color: $wrapper-background;
-//   padding: 80px;
-//   text-align: center;
-//   border: 1px solid $wrapper-border;
-// }
-
-.to-do-list__item--title {
-  
+  &__add-item {
+    background-color: $add-button-background;
+    color: $text;
+    border: $add-button-background;
+    margin-top: 10px;
+  }
 }
 
 // HIDE ELEMENTS
