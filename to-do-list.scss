@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto|Gloria+Hallelujah|Indie+Flower|Cabin+Sketch');
 
 // ============
+// MIXINS
+// ============
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// ============
 // FONT STYLINGS
 // ============
 
@@ -40,22 +50,24 @@ body {
   color: $text;
 	background: $background;
 	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flex-center;
 }
 
 button {
   padding: 20px 30px 20px 30px;
   border-radius: 4px;
-  margin: 5px 3px 5px 0px;
   color: $light-text;
 }
 
 input {
   padding: 20px 30px 20px 30px;
   border: $light-text;
-  border-radius: 4px;
+	border-radius: 4px;
+	margin-right: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
 }
 
 // input {
@@ -77,37 +89,35 @@ input {
 	color: $light-text;
 
 	&__title {
+		height: 10vh;
 		background: $dark-secondary;
-		padding: 20px;
     margin: 0;
-    text-align: center;
-    font-size: 2em;
+		font-size: 2em;
+		@include flex-center;
 	}
 }
 
 .task-list {
+	height: 50vh;
+	overflow: auto;
   padding-left: 0;
-  margin-top: 0;
-  list-style-type: none;
+  margin: 0;
+	list-style-type: none;
 
 	&__item {
-    align-items: center;
-		justify-content: center;
 		background: $dark-secondary;
 		padding: 10px;
 		margin-bottom: 2px;
-		min-height: 100px;
   }
 
   &__item-wrapper {
 		display: flex;
-    justify-content: space-between;
+		justify-content: space-between;
+		align-items: center;
   }
 
   &__item-text-wrapper {
-    justify-self: center;
-    align-self: center;
-    padding-left: 30px; 
+    padding: 0 30px; 
   }
 
     &__item-button-wrapper {
@@ -134,10 +144,10 @@ input {
 
 
 .input {
-  padding: 5px 10px 5px 10px;
+	height: 10vh;
   border-radius: 4px;
-  margin: 5px 3px 5px 0px;
-  text-align: center;
+	text-align: center;
+	@include flex-center;
 }
 
 // BUTTON STYLINGS
@@ -152,14 +162,13 @@ input {
     background-color: $edit-button-background;
     border: 1px solid $edit-button-background;
     color: $text;
-    margin-left: 3px;
+    margin-right: 10px;
   }
 
   &__add-item {
     background-color: $add-button-background;
     color: $text;
     border: $add-button-background;
-    margin-top: 10px;
   }
 }
 
