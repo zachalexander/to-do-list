@@ -20,10 +20,7 @@ let taskObj = [
 		completed: false
 	}
 ];
-
-let taskArray = ['test', 'test2', 'test3'];
-	 
-	
+	 	
 const $input = document.querySelector('input');
 const $addButton = document.querySelector('.btn__add-item');
 const $taskList = document.querySelector('.task-list');
@@ -95,8 +92,21 @@ function addItem() {
 }
 
 function completeItem() {
-	console.log('complete');
-	console.log(taskArray);
+	const $listItem = event.target.closest('.task-list__item');
+	const taskToComplete = $listItem.querySelector('.task-list__item-name').innerText;
+
+	// STATE
+	let index = taskObj.map(function (e) {
+		if (e.task === taskToComplete && e.completed === false) {
+			e.completed = true;
+			return taskChosenToComplete = e.task;
+		}
+
+		if (e.task === taskToComplete && e.completed === true) {
+			e.completed = false;
+			return taskChosenToComplete = e.task;
+		}
+	}).indexOf(taskChosenToComplete);
 }
 
 function deleteItem(event) {
