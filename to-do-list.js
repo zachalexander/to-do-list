@@ -1,4 +1,29 @@
-let taskArray = ['Go to the store.', 'Feed Ruggles his food.', 'Visit the grandparents.', 'Make a fresh brew of coffee.', 'Play soccer with friends.'];
+let taskObj = [
+	{
+		task: 'Go to the store.',
+		completed: false
+	}, 
+	{
+		task: 'Feed Ruggles his food.', 
+		completed: false
+	}, 
+	{
+		task: 'Visit the grandparents.', 
+		completed: false
+	}, 
+	{
+		task: 'Make a fresh brew of coffee.',
+		completed: false
+	}, 
+	{
+		task: 'Play soccer with friends.',
+		completed: false
+	}
+];
+
+let taskArray = ['test', 'test2', 'test3'];
+	 
+	
 const $input = document.querySelector('input');
 const $addButton = document.querySelector('.btn__add-item');
 const $taskList = document.querySelector('.task-list');
@@ -7,7 +32,8 @@ $addButton.addEventListener('click', addItem);
 
 // UI UPDATES
 
-taskArray.forEach(function(task) {
+taskObj.forEach(function(listParse) {
+	let task = listParse.task;
 	createElement(task);
 });
 
@@ -20,6 +46,7 @@ function createElement(taskName) {
 	let $listText = document.createElement("p");
 	let $deleteButton = document.createElement("button");
 	let $editButton = document.createElement("button");
+	let $completeButton = document.createElement("button");
 
 	// add classes
 	$listItem.classList.add("task-list__item");
@@ -29,6 +56,7 @@ function createElement(taskName) {
 	$buttonWrapper.classList.add("task-list__item-button-wrapper");
 	$deleteButton.classList.add("btn__delete-item");
 	$editButton.classList.add("btn__edit-item");
+	$completeButton.classList.add("btn__complete-item");
 
 	// add innerText to elements
 	$listText.innerText = taskName;
@@ -38,6 +66,7 @@ function createElement(taskName) {
 	// adding EventListeners
 	$deleteButton.addEventListener('click', deleteItem);
 	$editButton.addEventListener('click', editItem);
+	$completeButton.addEventListener('click', completeItem);
 
 	// appending elements to DOM
 	$taskList.append($listItem);
@@ -47,6 +76,7 @@ function createElement(taskName) {
 	$listWrapper.append($buttonWrapper);
 	$buttonWrapper.append($deleteButton);
 	$buttonWrapper.append($editButton);
+	$buttonWrapper.append($completeButton);
 }
 
 
@@ -58,7 +88,15 @@ function addItem() {
 	createElement(taskName);
 	
 	// STATE
-	taskArray.push($input.value);
+	taskObj.push({
+		task: $input.value,
+		completed: false
+	});
+}
+
+function completeItem() {
+	console.log('complete');
+	console.log(taskArray);
 }
 
 function deleteItem(event) {
@@ -68,8 +106,12 @@ function deleteItem(event) {
 	$taskList.removeChild($listItem);
 	
 	// STATE
-	let index = taskArray.indexOf(taskToDelete);
-	taskArray.splice(index, 1);
+	let index = taskObj.map(function(e){
+		if (e.task === taskToDelete) {
+			return taskChosenToDelete = e.task;
+		}
+	}).indexOf(taskChosenToDelete);
+	taskObj.splice(index, 1);
 }
 
 function editItem(event) {
@@ -105,9 +147,13 @@ function editItem(event) {
 		// remove edit box from UI
 		$listItem.removeChild($editListItem);
 
-		// // STATE
-		let index = taskArray.indexOf(task);
-		taskArray[index] = inputValue;
+		// STATE
+		let index = taskObj.map(function (e) {
+			if (e.task === task) {
+				return taskChosenToEdit = e.task;
+			}
+		}).indexOf(taskChosenToEdit);
+		taskObj[index].task = inputValue;
 	});
 
 	// appending elements to DOM

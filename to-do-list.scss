@@ -170,9 +170,21 @@ h1, h2, h3, h4, h5, h6, p {
     color: $text;
     border: $add-button-background;
   }
+
+  &__complete-item {
+    background-color: $light-text;
+    border: 1px solid $light-text;
+    margin-right: 10px;
+    order: -1;
+  }
 }
 
 // HIDE ELEMENTS
 .hide {
   display: none;
+}
+
+// COMPLETED TASK ELEMENT
+.completed {
+  text-decoration: line-through;
 }
