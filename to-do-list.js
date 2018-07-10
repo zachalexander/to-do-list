@@ -28,7 +28,6 @@ const $taskList = document.querySelector('.task-list');
 $addButton.addEventListener('click', addItem);
 
 // UI UPDATES
-
 taskObj.forEach(function(listParse) {
 	let task = listParse.task;
 	createElement(task);
@@ -76,8 +75,6 @@ function createElement(taskName) {
 	$buttonWrapper.append($completeButton);
 }
 
-
-
 // USER INTERACTION
 
 function addItem() {
@@ -94,16 +91,23 @@ function addItem() {
 function completeItem() {
 	const $listItem = event.target.closest('.task-list__item');
 	const taskToComplete = $listItem.querySelector('.task-list__item-name').innerText;
+	const $taskText = $listItem.querySelector('p.task-list__item-name');
 
 	// STATE
 	let index = taskObj.map(function (e) {
 		if (e.task === taskToComplete && e.completed === false) {
 			e.completed = true;
+			// UI
+			$taskText.classList.add("completed");
+			//
 			return taskChosenToComplete = e.task;
 		}
 
 		if (e.task === taskToComplete && e.completed === true) {
 			e.completed = false;
+			// UI
+			$taskText.classList.remove("completed");
+			//
 			return taskChosenToComplete = e.task;
 		}
 	}).indexOf(taskChosenToComplete);
