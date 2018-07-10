@@ -470,25 +470,4 @@ h1, h2, h3, h4, h5, h6, p {
 .completed {
   text-decoration: line-through;
 }
-
-:root {
-  --borderWidth: 7px;
-  --height: 24px;
-  --width: 12px;
-  --borderColor: #78b13f;
-}
-
-body {
-  padding: 20px;
-  text-align: center;
-}
-
-.check {
-  display: inline-block;
-  transform: rotate(45deg);
-  height: var(--height);
-  width: var(--width);
-  border-bottom: var(--borderWidth) solid var(--borderColor);
-  border-right: var(--borderWidth) solid var(--borderColor);
-}
 /*# sourceMappingURL=to-do-list.css.map */
