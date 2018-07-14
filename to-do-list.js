@@ -91,9 +91,11 @@ function addItem() {
 function completeItem() {
 	const $listItem = event.target.closest('.task-list__item');
 	const taskToComplete = $listItem.querySelector('.task-list__item-name').innerText;
-	const $taskText = $listItem.querySelector('p.task-list__item-name');
+	const $taskText = $listItem.querySelector('.task-list__item-name');
 
 	// STATE
+	// refactor this to use the event rather than mapping through everything
+	
 	let index = taskObj.map(function (e) {
 		if (e.task === taskToComplete && e.completed === false) {
 			e.completed = true;
@@ -111,6 +113,7 @@ function completeItem() {
 			return taskChosenToComplete = e.task;
 		}
 	}).indexOf(taskChosenToComplete);
+	console.log(taskObj);
 }
 
 function deleteItem(event) {
