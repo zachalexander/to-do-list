@@ -20,7 +20,7 @@ let taskObj = [
 		completed: false
 	}
 ];
-console.log(taskObj);	 	
+console.log(taskObj);
 const $input = document.querySelector('input');
 const $addButton = document.querySelector('.btn__add-item');
 const $taskList = document.querySelector('.task-list');
@@ -42,7 +42,11 @@ function createElement(taskName) {
 	let $listText = document.createElement("p");
 	let $deleteButton = document.createElement("button");
 	let $editButton = document.createElement("button");
-	let $completeButton = document.createElement("button");
+	let $completeButton = document.createElement("input");
+	let $completeButtonLabel = document.createElement("label");
+	$completeButton.type = "checkbox";
+	$completeButton.id = "checkbox_1";
+	$completeButtonLabel.htmlFor = "checkbox_1";
 
 	// add classes
 	$listItem.classList.add("task-list__item");
@@ -52,7 +56,7 @@ function createElement(taskName) {
 	$buttonWrapper.classList.add("task-list__item-button-wrapper");
 	$deleteButton.classList.add("btn__delete-item");
 	$editButton.classList.add("btn__edit-item");
-	$completeButton.classList.add("btn__complete-item");
+	$completeButton.classList.add("input__complete-item");
 
 	// add innerText to elements
 	$listText.innerText = taskName;
@@ -73,6 +77,7 @@ function createElement(taskName) {
 	$buttonWrapper.append($deleteButton);
 	$buttonWrapper.append($editButton);
 	$buttonWrapper.append($completeButton);
+	$buttonWrapper.append($completeButtonLabel);
 }
 
 // USER INTERACTION
@@ -95,7 +100,9 @@ function completeItem() {
 
 	// STATE
 	// refactor this to use the event rather than mapping through everything
-	
+
+
+
 	let index = taskObj.map(function (e) {
 		if (e.task === taskToComplete && e.completed === false) {
 			e.completed = true;

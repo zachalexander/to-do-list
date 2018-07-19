@@ -470,4 +470,20 @@ h1, h2, h3, h4, h5, h6, p {
 .completed {
   text-decoration: line-through;
 }
+
+.checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox label::before{
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border: 1px solid;
+}
+
+
+
+
 /*# sourceMappingURL=to-do-list.css.map */
